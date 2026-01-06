@@ -115,14 +115,59 @@ public class toggleModule {
       )
     );
 
-    //  COUNT
+    // HELMET DISPLAY
     ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
         dispatcher.register(ClientCommandManager.literal("toggleModule")
-          .then(ClientCommandManager.literal("fpsCounter")
+          .then(ClientCommandManager.literal("helmetDisplay")
             .then(ClientCommandManager.argument("enabled", BoolArgumentType.bool()).executes(context -> {
               boolean enabled = BoolArgumentType.getBool(context, "enabled");
-              modules.fpsCounter.enabled = enabled;
-              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aToggled §6FPS Counter §ato §d%b".formatted(enabled)));
+              modules.helmetDisplay.enabled = enabled;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aToggled §6Helmet Display §ato §d%b".formatted(enabled)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    );
+
+    // CHESTPLATE DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+        dispatcher.register(ClientCommandManager.literal("toggleModule")
+          .then(ClientCommandManager.literal("chestplateDisplay")
+            .then(ClientCommandManager.argument("enabled", BoolArgumentType.bool()).executes(context -> {
+              boolean enabled = BoolArgumentType.getBool(context, "enabled");
+              modules.chestplateDisplay.enabled = enabled;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aToggled §6Chestplate Display §ato §d%b".formatted(enabled)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    );
+
+    // LEGGINGS DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+        dispatcher.register(ClientCommandManager.literal("toggleModule")
+          .then(ClientCommandManager.literal("leggingsDisplay")
+            .then(ClientCommandManager.argument("enabled", BoolArgumentType.bool()).executes(context -> {
+              boolean enabled = BoolArgumentType.getBool(context, "enabled");
+              modules.leggingsDisplay.enabled = enabled;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aToggled §6 Display §ato §d%b".formatted(enabled)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    );
+
+    // BOOTS DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+        dispatcher.register(ClientCommandManager.literal("toggleModule")
+          .then(ClientCommandManager.literal("bootsDisplay")
+            .then(ClientCommandManager.argument("enabled", BoolArgumentType.bool()).executes(context -> {
+              boolean enabled = BoolArgumentType.getBool(context, "enabled");
+              modules.bootsDisplay.enabled = enabled;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aToggled §6Boots Display §ato §d%b".formatted(enabled)));
               saveLoad.saveToConfig();
               return 1;
             })))

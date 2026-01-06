@@ -1,4 +1,4 @@
-package potatoslayer56.potatoclient.modules.render.hud;
+package potatoslayer56.potatoclient.modules.render.hud.counters;
 
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElement;
 import net.minecraft.client.MinecraftClient;
@@ -10,26 +10,26 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import potatoslayer56.potatoclient.config.modules;
 
-public class totemCount implements HudElement {
+public class crystalCount implements HudElement {
   @Override
   public void render(DrawContext drawContext, RenderTickCounter renderTickCounter) {
     MinecraftClient minecraftClient = MinecraftClient.getInstance();
     ClientPlayerEntity player = minecraftClient.player;
     TextRenderer textRenderer = minecraftClient.textRenderer;
 
-    if (modules.totemCount.enabled) {
+    if (modules.crystalCount.enabled) {
       drawContext.drawItem(
-        new ItemStack(Items.TOTEM_OF_UNDYING, 1),
-        modules.totemCount.xPos,
-        modules.totemCount.yPos
+        new ItemStack(Items.END_CRYSTAL, 1),
+        modules.crystalCount.xPos,
+        modules.crystalCount.yPos
       );
 
       drawContext.drawText(
         textRenderer,
-        String.valueOf(player.getInventory().count(Items.TOTEM_OF_UNDYING)),
-        modules.totemCount.xPos + 17,
-        modules.totemCount.yPos + 4,
-        modules.totemCount.colour,
+        String.valueOf(player.getInventory().count(Items.END_CRYSTAL)),
+        modules.crystalCount.xPos + 17,
+        modules.crystalCount.yPos + 4,
+        modules.crystalCount.colour,
         false
       );
     }

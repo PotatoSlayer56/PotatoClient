@@ -134,5 +134,77 @@ public class moveModule {
         )
       )
     ));
+
+    // HELMET DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+      dispatcher.register(ClientCommandManager.literal("moveModule")
+        .then(ClientCommandManager.literal("helmetDisplay")
+          .then(ClientCommandManager.argument("x position", IntegerArgumentType.integer(0))
+            .then(ClientCommandManager.argument("y position", IntegerArgumentType.integer(0)).executes(context -> {
+              int xPos = IntegerArgumentType.getInteger(context, "x position");
+              int yPos = IntegerArgumentType.getInteger(context, "y position");
+              modules.helmetDisplay.xPos = xPos;
+              modules.helmetDisplay.yPos = yPos;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aChanged §6Helmet Display §aposition to §d%d, %d".formatted(xPos,yPos)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    ));
+
+    // CHESTPLATE DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+      dispatcher.register(ClientCommandManager.literal("moveModule")
+        .then(ClientCommandManager.literal("chestplateDisplay")
+          .then(ClientCommandManager.argument("x position", IntegerArgumentType.integer(0))
+            .then(ClientCommandManager.argument("y position", IntegerArgumentType.integer(0)).executes(context -> {
+              int xPos = IntegerArgumentType.getInteger(context, "x position");
+              int yPos = IntegerArgumentType.getInteger(context, "y position");
+              modules.chestplateDisplay.xPos = xPos;
+              modules.chestplateDisplay.yPos = yPos;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aChanged §6Chestplate Display §aposition to §d%d, %d".formatted(xPos,yPos)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    ));
+
+    // LEGGINGS DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+      dispatcher.register(ClientCommandManager.literal("moveModule")
+        .then(ClientCommandManager.literal("leggingsDisplay")
+          .then(ClientCommandManager.argument("x position", IntegerArgumentType.integer(0))
+            .then(ClientCommandManager.argument("y position", IntegerArgumentType.integer(0)).executes(context -> {
+              int xPos = IntegerArgumentType.getInteger(context, "x position");
+              int yPos = IntegerArgumentType.getInteger(context, "y position");
+              modules.leggingsDisplay.xPos = xPos;
+              modules.leggingsDisplay.yPos = yPos;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aChanged §6Leggings Display §aposition to §d%d, %d".formatted(xPos,yPos)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    ));
+
+    // BOOTS DISPLAY
+    ClientCommandRegistrationCallback.EVENT.register(((dispatcher, registryAccess) ->
+      dispatcher.register(ClientCommandManager.literal("moveModule")
+        .then(ClientCommandManager.literal("bootsDisplay")
+          .then(ClientCommandManager.argument("x position", IntegerArgumentType.integer(0))
+            .then(ClientCommandManager.argument("y position", IntegerArgumentType.integer(0)).executes(context -> {
+              int xPos = IntegerArgumentType.getInteger(context, "x position");
+              int yPos = IntegerArgumentType.getInteger(context, "y position");
+              modules.bootsDisplay.xPos = xPos;
+              modules.bootsDisplay.yPos = yPos;
+              context.getSource().sendFeedback(Text.literal("§7[§bPotatoClient§7] §aChanged §6Boots Display §aposition to §d%d, %d".formatted(xPos,yPos)));
+              saveLoad.saveToConfig();
+              return 1;
+            })))
+        )
+      )
+    ));
   }
 }
