@@ -1,0 +1,23 @@
+{
+  "potatoclient.screen.config.name": "PotatoClient Config",
+  "potatoclient.config.column.module.text": "Module Name",
+  "potatoclient.config.column.xPosition.text": "X",
+  "potatoclient.config.column.yPosition.text": "Y",
+  "potatoclient.config.toggle.text": "Toggle",
+  "potatoclient.config.fpsCounter.text": "Fps Counter",
+  "potatoclient.config.coordinates.text": "Coordinates",
+  "potatoclient.config.crystalCount.text": "Crystals",
+  "potatoclient.config.expCount.text": "EXP Bottles",
+  "potatoclient.config.gappleCount.text": "Gapples",
+  "potatoclient.config.pearlCount.text": "Pearls",
+  "potatoclient.config.totemCount.text": "Totems",
+  "potatoclient.config.helmetDisplay.text": "Helmet",
+  "potatoclient.config.chestplateDisplay.text": "Chestplate",
+  "potatoclient.config.leggingsDisplay.text": "Leggings",
+  "potatoclient.config.bootsDisplay.text": "Boots",
+  "potatoclient.config.countersButton.text": "Counters Config",
+  "potatoclient.config.armourButton.text": "Armour Config",
+  "potatoclient.config.backButton.text": "Back",
+  "potatoclient.config.saveButton.text": "Save and Close",
+  "key.potatoclient.openConfigGUI": "Open Config"
+}
