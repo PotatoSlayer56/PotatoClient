@@ -1,6 +1,7 @@
 package potatoslayer56.potatoclient.config;
 
 import com.google.gson.Gson;
+import potatoslayer56.potatoclient.PotatoClient;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -42,11 +43,12 @@ public class saveLoad {
       fileWriter.write(gson.toJson(modules.chestplateDisplay));fileWriter.write("\n");
       fileWriter.write(gson.toJson(modules.leggingsDisplay));fileWriter.write("\n");
       fileWriter.write(gson.toJson(modules.bootsDisplay));fileWriter.write("\n");
+      fileWriter.write(gson.toJson(modules.totemVignette));fileWriter.write("\n");
 
       fileWriter.close();
     }
     catch (IOException e) {
-      throw new RuntimeException(e);
+      PotatoClient.LOGGER.warn("Failed to write to config");
     }
   }
 
@@ -73,9 +75,10 @@ public class saveLoad {
       modules.chestplateDisplay = gson.fromJson(data.get(8), moduleConfig.class);
       modules.leggingsDisplay = gson.fromJson(data.get(9), moduleConfig.class);
       modules.bootsDisplay = gson.fromJson(data.get(10), moduleConfig.class);
+      modules.totemVignette = gson.fromJson(data.get(11), moduleConfig.class);
     }
     catch (IOException e) {
-      throw new RuntimeException(e);
+      PotatoClient.LOGGER.warn("Incomplete Config");
     }
   }
 }
