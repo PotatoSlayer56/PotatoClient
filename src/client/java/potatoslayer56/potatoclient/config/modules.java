@@ -15,4 +15,6 @@ public class modules {
   public static moduleConfig chestplateDisplay = new moduleConfig(2,130, Colors.WHITE,true);
   public static moduleConfig leggingsDisplay = new moduleConfig(2,150, Colors.WHITE,true);
   public static moduleConfig bootsDisplay = new moduleConfig(2,170, Colors.WHITE,true);
+
+  public static moduleConfig totemVignette = new moduleConfig(0,0, Colors.LIGHT_RED,true);
 }

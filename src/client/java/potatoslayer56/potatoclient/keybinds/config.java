@@ -8,6 +8,7 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 import potatoslayer56.potatoclient.screens.mainConfigScreen;
+import potatoslayer56.potatoclient.screens.renderMainConfigScreen;
 
 public class config {
   public static void register() {

@@ -175,7 +175,7 @@ public class armourConfigScreen extends Screen {
     ).dimensions(210,86,50,20).build();
 
     ButtonWidget backButton = ButtonWidget.builder(Text.translatable("potatoclient.config.backButton.text"), (button -> {
-        MinecraftClient.getInstance().setScreen(new mainConfigScreen(Text.translatable("potatoclient.screen.config.name")));
+        MinecraftClient.getInstance().setScreen(new renderMainConfigScreen(Text.translatable("potatoclient.screen.config.name")));
         modules.helmetDisplay.xPos = Integer.parseInt(helmetDisplayPositionXInput.getText());
         modules.helmetDisplay.yPos = Integer.parseInt(helmetDisplayPositionYInput.getText());
         modules.chestplateDisplay.xPos = Integer.parseInt(chestplateDisplayPositionXInput.getText());

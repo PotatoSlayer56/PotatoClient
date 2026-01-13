@@ -19,5 +19,9 @@
   "potatoclient.config.armourButton.text": "Armour Config",
   "potatoclient.config.backButton.text": "Back",
   "potatoclient.config.saveButton.text": "Save and Close",
+  "potatoclient.config.title.text": "PotatoClient Config",
+  "potatoclient.config.renderConfigButton.text": "Render Config",
+  "potatoclient.config.totemVignette.text": "Totem Vignette",
+  "potatoclient.config.pvpConfigButton.text": "PvP Config",
   "key.potatoclient.openConfigGUI": "Open Config"
 }

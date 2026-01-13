@@ -209,7 +209,7 @@ public class countersConfigScreen extends Screen {
     ).dimensions(210,108,50,20).build();
 
     ButtonWidget backButton = ButtonWidget.builder(Text.translatable("potatoclient.config.backButton.text"), (button -> {
-        MinecraftClient.getInstance().setScreen(new mainConfigScreen(Text.translatable("potatoclient.screen.config.name")));
+        MinecraftClient.getInstance().setScreen(new renderMainConfigScreen(Text.translatable("potatoclient.screen.config.name")));
         modules.crystalCount.xPos = Integer.parseInt(crystalCountPositionXInput.getText());
         modules.crystalCount.yPos = Integer.parseInt(crystalCountPositionYInput.getText());
         modules.expCount.xPos = Integer.parseInt(expCountPositionXInput.getText());
@@ -234,6 +234,9 @@ public class countersConfigScreen extends Screen {
     totemCountPositionXInput.setText(String.valueOf(modules.totemCount.xPos));
     totemCountPositionYInput.setText(String.valueOf(modules.totemCount.yPos));
 
+    this.addDrawableChild(moduleColumnText);
+    this.addDrawableChild(xPositionColumnText);
+    this.addDrawableChild(yPositionColumnText);
     this.addDrawableChild(crystalCountText);
     this.addDrawableChild(crystalCountPositionXInput);
     this.addDrawableChild(crystalCountPositionYInput);
